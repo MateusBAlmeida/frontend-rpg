@@ -1,8 +1,7 @@
-import { useRef, useState } from 'react';
-import { Card, CardContent } from './components/ui/card';
+import { useRef, useState, type JSX } from 'react';
 import { Button } from "./components/ui/button";
 import { ScrollArea } from "./components/ui/scroll-area"
-import { Shield, Sword, Heart, Brain, Eye, Smile, Dumbbell, BookText, PenLine, Download } from "lucide-react";
+import { Shield, Heart, Eye, Smile, Dumbbell, BookText, Download } from "lucide-react";
 import html2pdf from 'html2pdf.js';
 
 export default function GeradorFicha() {
