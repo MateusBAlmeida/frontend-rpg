@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.ficha-moldura {
+  border-image-source: url('/moldura-parchment.png');
+  border-image-slice: 30 fill;
+  border-image-width: 16px;
+  border-image-repeat: stretch;
+  border-style: solid;
+}
+
 
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
