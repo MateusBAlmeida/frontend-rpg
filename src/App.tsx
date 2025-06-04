@@ -9,7 +9,7 @@ export default function GeradorFicha() {
   const gerarFicha = async () => {
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:8000/generate");
+      const response = await fetch("https://ficha-rpg-puq8.onrender.com/generate");
       const data = await response.json();
       setFicha(data);
     } catch (error) {
