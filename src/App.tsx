@@ -3,7 +3,16 @@ import { Card, CardContent } from './components/ui/card';
 import { Button } from "./components/ui/button";
 
 export default function GeradorFicha() {
-  const [ficha, setFicha] = useState(null);
+  type Ficha = {
+    raca: string;
+    classe: string;
+    atributos: Record<string, number>;
+    modificadores: Record<string, number>;
+    habilidades_raciais: string[];
+  };
+  
+  const [ficha, setFicha] = useState<Ficha | null>(null);
+  
   const [loading, setLoading] = useState(false);
 
   const gerarFicha = async () => {
