@@ -39,7 +39,7 @@ export default function GeradorFicha() {
         filename: 'ficha-personagem-'+ficha?.raca+'-'+ficha?.classe+'.pdf',
         image: { type: 'jpeg', quality: 0.98 },
         html2canvas: { scale: 2 },
-        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
+        jsPDF: { unit: 'in', format: '', orientation: 'portrait' },
       }).save();
     }
   };
@@ -81,11 +81,13 @@ export default function GeradorFicha() {
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                   {Object.entries(ficha.atributos).map(([atrib, valor]) => (
                     <div key={atrib} className="p-3 rounded-lg text-center shadow-inner border border-yellow-700">
-                      <div className="text-lg font-bold uppercase">
-                        {atributoIcones[atrib]}{atrib}
+                      <div className="">
+                        {atributoIcones[atrib]}
                       </div>
+                      <div className="text-1lg font-bold uppercase">{atrib.substring(0, 3)}</div>
+                      <div className="text-1sm">{atrib}</div>
                       <div className="text-2xl">{valor}</div>
-                      <div className="text-sm text-stone-600">Mod: {ficha.modificadores[atrib]}</div>
+                      <div className="text-sm text-stone-800">Mod: {ficha.modificadores[atrib]}</div>
                     </div>
                   ))}
                 </div>

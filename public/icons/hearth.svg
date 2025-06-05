@@ -1,0 +1,4 @@
+<!-- public/icons/heart.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+  <path d="M20.84 4.61c-1.4-1.45-3.65-1.5-5.08-.08L12 8.29 8.24 4.53C6.8 3.1 4.55 3.15 3.15 4.59s-1.5 3.65-.08 5.08l8.94 8.96 8.96-8.96c1.42-1.42 1.37-3.67-.13-5.06z" />
+</svg>
