@@ -11,6 +11,9 @@ export default function GeradorFicha() {
     atributos: Record<string, number>;
     modificadores: Record<string, number>;
     habilidades_raciais: string[];
+    pv: number;
+    ca: number;
+    jp: Record<string, number>;
   };
   
   const [ficha, setFicha] = useState<Ficha | null>(null);
@@ -92,6 +95,22 @@ export default function GeradorFicha() {
                   ))}
                 </div>
               </section>
+
+              <section className="border-b border-stone-600 pb-4">
+                <h2 className="text-2xl font-bold mb-2 border-l-4 border-black pl-2">Defesa e Combate</h2>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-lg">
+                  <div><strong>Pontos de Vida (PV):</strong> {ficha.pv}</div>
+                  <div><strong>Classe de Armadura (CA):</strong> {ficha.ca}</div>
+                  <div><strong>Jogadas de Proteção:</strong>
+                    <ul className="pl-4 list-disc text-sm">
+                      <li>JPD: {ficha.jp.JPD}</li>
+                      <li>JPC: {ficha.jp.JPC}</li>
+                      <li>JPS: {ficha.jp.JPS}</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
 
               <section className="border-b border-stone-600 pb-4">
                 <h2 className="text-2xl font-bold mb-2 border-l-4 border-black pl-2">Habilidades Raciais</h2>
