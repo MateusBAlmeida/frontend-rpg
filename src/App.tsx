@@ -57,19 +57,22 @@ export default function GeradorFicha() {
   };
 
   return (
-    <div className="min-h-screen bg-stone-400 bg-[url('/fundo.png')] bg-fill bg-center text-white p-6">
-      <div className="max-w-4xl mx-auto text-center p-4">
-        <h1 className="text-4xl font-bold mb-8 tracking-wide uppercase">Ficha de Personagem</h1>
+    <div className="min-h-screen bg-yellow-900 bg-[url('/fundo.png')] bg-auto bg-repeat bg-center text-white ">
+      <div className="text-center">
+        <div className='max-w pt-6'>
+        <h1 className="titulo-grimorio text-border-white text-white text-6xl mb-8 tracking-wide uppercase">Ficha de Personagem</h1>
         <div className="flex justify-center gap-4 mb-8">
-        <Button onClick={gerarFicha} disabled={loading} className="mb-8 text-lg bg-stone-800 hover:bg-stone-500 rounded">
+        <Button onClick={gerarFicha} disabled={loading} className="mb-8 text-lg bg-stone-800 hover:bg-stone-500 outline outline-offset-1 outline-white rounded">
           {loading ? "Gerando..." : "Gerar Nova Ficha"}
         </Button>
         {ficha && (
-            <Button onClick={exportarPDF} variant="secondary" className="mb-8 text-lg bg-stone-800 hover:bg-stone-500 rounded">
+            <Button onClick={exportarPDF} variant="secondary" className="mb-8 text-lg bg-stone-800 hover:bg-stone-500 outline outline-offset-1 outline-white rounded">
               <Download className="w-4 h-4 mr-2" /> Exportar PDF
             </Button>
           )}
         </div>
+        </div>
+        <div className="max-w-4xl mx-auto text-center pb-6">
         {ficha && (
           <ScrollArea className="rounded-md bg-[url('/papel-antigo.jpg')] bg-local bg-cover bg-center shadow-xl p-6">
             <div ref={fichaRef} className="grid gap-6 text-left text-black font-serif">
@@ -130,6 +133,7 @@ export default function GeradorFicha() {
             </div>
           </ScrollArea>
         )}
+        </div>
       </div>
     </div>
   );

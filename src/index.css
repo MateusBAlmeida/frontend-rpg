@@ -2,11 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'EnchantedLand';
+  src: url('/fonts/enchanted-land.otf') format('truetype');
+  font-display: swap;
+}
+
+.titulo-grimorio {
+  font-family: 'EnchantedLand', serif;
+  letter-spacing: 2px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
 .ficha-moldura {
   border-image-source: url('/moldura-parchment.png');
   border-image-slice: 30 fill;
   border-image-width: 16px;
-  border-image-repeat: stretch;
+  border-image-repeat: none;
   border-style: solid;
 }
 
